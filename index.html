@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="#home" class="w3-button w3-bar-item">Home</a>
+  <a href="#tour" class="w3-button w3-bar-item">Tour</a>
+  <a href="#contact" class="w3-button w3-bar-item">Contact</a>
+</nav>
+
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="https://nairobinews.nation.co.ke/wp-content/uploads/2019/09/Sauti-Sol.jpg"
+  style="width:100%">
+  <img class="mySlides" src="https://i2.wp.com/www.soundsofafrica.org/wp-content/uploads/2020/07/sauti-sol-2.jpg?fit=1200%2C1200&ssl=1"
+  style="width:100%">
+  <img class="mySlides" src="http://ocdn.eu/images/pulscms/NTE7MDA_/30b2539286250f255f865326b5d72f7e.png"
+  style="width:100%">
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+    <h2 class="w3-wide">THE BAND</h2>
+    <p class="w3-opacity"><i>We love music</i></p>
+    <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </section>
+  <div class="contactForm" onload="personDetals()">
+      <label for="fname">firstName</label>
+       <input type="username" id="fname" name="name" placeholder=" Enter your firstName">
+       <label for="fname">lastName</label>
+       <input type="username" id="lname" name="name" placeholder=" Enter your lastName">
+       <label for="fname">email</label>
+       <input type="username" id="email"name="email" placeholder=" Enter your email address">
+       <label for="psd">password</label>
+       <input type="password" id="password" name="name" placeholder=" Enter your password">
+
+  </div>
+  <div>
+    <label class="lead mr-2 ml-2" for="month">Jump To: </label>
+    <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
+      <option value=0>jan</option>
+      <option value=1>jan</option>
+      <option value=2>jan</option>
+      <option value=3>jan</option>
+      <option value=4>jan</option>
+      <option value=5>jan</option>
+      <option value=6>jan</option>
+      <option value=7>jan</option>
+      <option value=8>jan</option>
+      <option value=9>jan</option>
+      <option value=10>jan</option>
+      <option value=11>jan</option>
+      <option value=12>jan</option>
+      <label for="year"></label><select class="form-control col-sm-4" name="year" id="year" onchange="jump()">
+        <option value=2021>2021</option>
+  </div>
+
+  <script src="main.js">
+ </script>
+  </body>
+</html>
+  // Automatic Slideshow - change image every 3 seconds
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+
+    //I n the first variable  we are initialising  0 to variable myIndex in oder to be able to loop through
+     the values
+     //it enables the photos to after each other in the interval of 3 seconds when it meets the 
+     condition that was given 
